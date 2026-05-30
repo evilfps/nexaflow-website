@@ -1,36 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# NexaFlow Solutions
 
-## Getting Started
+College capstone project — supply chain intelligence platform landing page.
 
-First, run the development server:
+Built with Next.js 16 + Tailwind CSS v4 + Framer Motion. Static export for easy hosting.
+
+## What this is
+
+NexaFlow is a fictional B2B SaaS company for my capstone. The site needed to look legit enough to pass as a real product landing page, with:
+
+- Editorial typography (Geist font, light weights)
+- Functional dashboard mockup (not just screenshots — built in CSS/HTML)
+- Animated number counters, scroll-triggered reveals
+- Data viz (disruption trend chart)
+- Light mode enterprise aesthetic inspired by Cursor, Linear, etc.
+
+## Run it locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Build for production
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run build
+```
 
-## Learn More
+Outputs static files to `dist/` — can be dropped on any static host (Vercel, Netlify, GitHub Pages).
 
-To learn more about Next.js, take a look at the following resources:
+## Project structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+src/app/
+  components/
+    Navbar.tsx          — sticky nav with mobile menu
+    Hero.tsx             — headline + network map + stats
+    NetworkMap.tsx       — SVG node graph animation
+    Stats.tsx            — animated counters
+    ProductVisual.tsx    — dashboard mockup (the dense part)
+    Pillars.tsx          — 4 capabilities, editorial list
+    Problem.tsx          — stat rows + trend chart
+    CTA.tsx              — call to action
+    Footer.tsx           — minimal footer
+  globals.css            — theme tokens + Tailwind v4
+  layout.tsx             — root layout, fonts
+  page.tsx               — composes all sections
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Notes
 
-## Deploy on Vercel
+- Went through a few iterations — started dark mode, switched to light because it felt less empty
+- Dashboard mockup took the longest, getting the table + alerts + chart to feel real
+- Some animations use Framer Motion's `useInView` for scroll triggers
+- Static export because I didn't want to deal with a server for a demo site
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+MIT — feel free to fork if you're also doing a college project and need a reference.
