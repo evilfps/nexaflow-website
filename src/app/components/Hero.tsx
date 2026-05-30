@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import NetworkMap from "./NetworkMap";
+import Stats from "./Stats";
 
 export default function Hero() {
   return (
@@ -75,37 +76,13 @@ export default function Hero() {
             </a>
           </motion.div>
         </div>
-
-        {/* Stats bar at bottom of hero */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="mt-24 pt-8 border-t border-border"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div>
-              <div className="text-[24px] font-light text-foreground mb-1">60+</div>
-              <div className="text-[11px] uppercase tracking-[0.12em] text-muted">Countries</div>
-            </div>
-            <div>
-              <div className="text-[24px] font-light text-foreground mb-1">5,000+</div>
-              <div className="text-[11px] uppercase tracking-[0.12em] text-muted">Suppliers</div>
-            </div>
-            <div>
-              <div className="text-[24px] font-light text-foreground mb-1">200+</div>
-              <div className="text-[11px] uppercase tracking-[0.12em] text-muted">Clients</div>
-            </div>
-            <div>
-              <div className="text-[24px] font-light text-foreground mb-1">40+</div>
-              <div className="text-[11px] uppercase tracking-[0.12em] text-muted">Markets</div>
-            </div>
-          </div>
-        </motion.div>
       </div>
 
       {/* Bottom border */}
       <div className="absolute bottom-0 left-0 right-0 h-px bg-border" />
+
+      {/* Stats bar — separated so it scrolls into view and triggers animation */}
+      <Stats />
     </section>
   );
 }

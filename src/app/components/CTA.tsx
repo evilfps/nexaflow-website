@@ -18,14 +18,17 @@ export default function CTA() {
           className="max-w-2xl"
         >
           <h2 className="text-[clamp(1.75rem,4vw,2.5rem)] font-light tracking-tight leading-[1.1] mb-6">
-            Ready to see what
+            Join 200+ businesses
             <br />
-            your supply chain hides?
+            building resilient chains.
           </h2>
 
-          <p className="text-[15px] text-muted leading-[1.7] max-w-md mb-10">
-            Join the companies that stopped reacting to disruption and started
-            preventing it. No credit card required.
+          <p className="text-[15px] text-muted leading-[1.7] max-w-md mb-2">
+            Request a demo at nexaflow.io and see your full supplier network
+            mapped in under 10 minutes. No credit card required.
+          </p>
+          <p className="text-[12px] text-muted/70 mb-10">
+            Limited early access slots for Q3 2026.
           </p>
 
           <div className="flex items-center gap-6">

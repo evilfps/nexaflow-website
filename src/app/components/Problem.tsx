@@ -34,7 +34,7 @@ export default function Problem() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="solutions" ref={ref} className="py-28 bg-surface">
+    <section id="problem" ref={ref} className="py-28 bg-surface">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid lg:grid-cols-[1fr_420px] gap-16 items-start">
           <div>

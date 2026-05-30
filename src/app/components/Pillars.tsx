@@ -55,18 +55,27 @@ export default function Pillars() {
           {pillars.map((pillar, i) => (
             <motion.div
               key={pillar.num}
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
+              initial={{ opacity: 0, y: 30, scale: 0.98 }}
+              animate={inView ? { opacity: 1, y: 0, scale: 1 } : {}}
               transition={{
-                duration: 0.8,
-                delay: 0.1 + i * 0.1,
+                duration: 0.9,
+                delay: 0.2 + i * 0.18,
                 ease: [0.16, 1, 0.3, 1],
               }}
               className="grid md:grid-cols-[80px_280px_1fr] gap-4 md:gap-8 py-8 border-t border-border items-start"
             >
-              <div className="text-[11px] font-mono text-muted pt-1">
+              <motion.div
+                initial={{ opacity: 0, x: -10 }}
+                animate={inView ? { opacity: 1, x: 0 } : {}}
+                transition={{
+                  duration: 0.6,
+                  delay: 0.3 + i * 0.18,
+                  ease: [0.16, 1, 0.3, 1],
+                }}
+                className="text-[11px] font-mono text-muted pt-1"
+              >
                 {pillar.num}
-              </div>
+              </motion.div>
               <h3 className="text-[17px] font-medium tracking-tight">
                 {pillar.title}
               </h3>
